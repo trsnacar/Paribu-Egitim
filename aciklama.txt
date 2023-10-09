@@ -1,0 +1,9 @@
+Fonksiyon: getAllAdmins
+Bu fonksiyonun amacı, admins adlı bir dizi içerisinde saklanan tüm yönetici hesaplarını geri döndürmektir. Dizi, genellikle sözleşme içerisinde tanımlanmış olan yönetici hesaplarını saklamak için kullanılır.
+
+public: Bu anahtar kelime, bu fonksiyonun herkes tarafından çağrılabilir olduğunu belirtir.
+view: Bu fonksiyonun blockchain üzerinde herhangi bir değişiklik yapmadığını, sadece veri okuduğunu belirtir.
+returns(Account[] memory): Bu fonksiyonun, Account tipinde bir dizi döndüreceğini belirtir.
+Fonksiyonun içeriğinde, öncelikle admins dizisinin uzunluğu length değişkenine atanır. Daha sonra bu uzunlukta bir _admins adında yeni bir dizi oluşturulur. For döngüsü ile admins dizisindeki tüm elemanlar _admins dizisine kopyalanır. Son olarak, _admins döndürülür.
+
+Bu fonksiyon, sözleşmenin kullanıcılarına, sistemde kayıtlı olan tüm yönetici hesaplarını sorgulama yeteneği sağlar.
