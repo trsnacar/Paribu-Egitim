@@ -1,0 +1,6 @@
+Ethereum'da yazılan bir Token kontratındaki Transfer metodunun güvenliği, genellikle kontratın nasıl yazıldığına bağlıdır. ERC-20 gibi standart token kontratlarında, Transfer fonksiyonu genellikle güvenliği artırmak için şu unsurları içermelidir:
+
+Reentrancy Guard: Akıllı kontratın reentrancy saldırılarına karşı korunması için, çağrıların yinelenmesini engelleyen kontrollerin eklenmesi gerekir.
+Overflow ve Underflow Kontrolleri: Solidity 0.8.0 ve üzeri sürümlerinde bu tür kontroller otomatik olarak yapılıyor. Ancak daha eski sürümlerde SafeMath kütüphanesi kullanılarak aritmetik işlemler sırasında taşma (overflow) ve eksilme (underflow) durumlarından kaçınılmalıdır.
+Input Validation: Fonksiyona gönderilen argümanların, beklenen aralıkta ve doğru formatta olduğundan emin olmak için gerekli kontroller yapılmalıdır.
+Event Logging: Transfer işlemleri sırasında oluşan event'lerin loglanması, kontrat etkileşimlerinin izlenebilirliğini artırır.
